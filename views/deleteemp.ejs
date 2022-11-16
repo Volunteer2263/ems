@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>employee data</title>
+  </head>
+    <body>
+        <h2> Delete Employee Record </h2>
+            <table border="2">
+                <% for(i=0;i<data.length;i++)
+                { %>
+                <tr><td><%=data[i].empid%>
+                    <td><%=data[i].password%>
+                    <td><%=data[i].name%>
+                    <td><%=data[i].address%>
+                    <td><%=data[i].phone%>
+                    <td><%=data[i].salary%>
+                    <td><%=data[i].department%>
+                    <td><%=data[i].status%>
+                    <td><form action="/deleteemp/<%=data[i].empid%>" method="post">
+                          <input type="submit" value="delete"/>
+                        </form>
+                <% } %>
+        </table>
+        <a href="./" style="color:black">BACK TO HOME PAGE</a>
+    </body>
+</html>

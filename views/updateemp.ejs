@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>update employee data</title>
+  </head>
+    <body>
+        <h2> update employee data </h2>
+        <table border="2">
+            <% for(i=0;i<data.length;i++)
+                { %>
+                <tr><td><%=data[i].empid%>
+                    <td><%=data[i].password%>
+                    <td><%=data[i].name%>
+                    <td><%=data[i].address%>
+                    <td><%=data[i].phone%>
+                    <td><%=data[i].salary%>
+                    <td><%=data[i].department%>
+                    <td><%=data[i].status%>
+                    <td><form action="/updateemp/<%=data[i].empid%>" method="post">
+                          <input type="submit" value="edit"/>
+                        </form>
+                <% } %>
+        </table> 
+        <a href="./" style="color:black">BACK TO HOME PAGE</a>
+    </body>
+</html>

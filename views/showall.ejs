@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>employee data</title>
+  </head>
+    <body>
+        <h2> Employee Details </h2>
+            <table border="2">
+              <tr><th>Emp ID</th>
+                <th>Password</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Salary</th>
+                <th>Department</th>
+                <th>Status</th>
+              </tr>
+                <% for(i=0;i<data.length;i++)
+                { %>
+                <tr><td><%=data[i].empid%>
+                    <td><%=data[i].password%>
+                    <td><%=data[i].name%>
+                    <td><%=data[i].address%>
+                    <td><%=data[i].phone%>
+                    <td><%=data[i].salary%>
+                    <td><%=data[i].department%>
+                    <td><%=data[i].status%>
+                <% } %>
+        </table>
+        <a href="./" style="color:black">BACK TO HOME PAGE</a>
+    </body>
+</html>

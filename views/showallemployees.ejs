@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>employee data</title>
+  </head>
+    <body>
+      <h2> Approve Employee Record </h2>
+            <table border="2">
+              <tr>
+                <th>Emp ID</th>
+                <th>Password</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>Salary</th>
+                <th>Department</th>
+                <th>Status</th>
+                <th>Approve</th>
+              </tr>
+                <% for(i=0;i<data.length;i++)
+                { %>
+                <tr><td><%=data[i].empid%></td>
+                    <td><%=data[i].password%></td>
+                    <td><%=data[i].name%></td>
+                    <td><%=data[i].address%></td>
+                    <td><%=data[i].phone%></td>
+                    <td><%=data[i].salary%></td>
+                    <td><%=data[i].department%></td>
+                    <td><%=data[i].status%></td>
+                    <td><form action="/approvee/<%=data[i].empid%>" method="post">
+                          <input type="submit" value="approve"/>
+                        </form></td>
+                    </tr>
+                <% } %>
+        </table>
+        <a href="./" style="color:black">BACK TO HOME PAGE</a>
+    </body> 
+</html>
